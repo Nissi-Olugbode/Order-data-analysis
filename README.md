@@ -34,17 +34,20 @@ The data set was provided in CSV format. It contains records of product orders, 
 - Grouping and Sorting to extract Top/Bottom performers
 
 ### Exploratory Data Analysis
+
 ### Data Analysis
-This includes some basic lines on how I created the custom columns;
+This includes some lines on how I created some SQL queries;
 - Product Category with Highest Sales
-``` SELECT PRODUCT_CATEGORY, SUM(SALES)AS TOTAL_SALES
+  ``` SELECT PRODUCT_CATEGORY, SUM(SALES)AS TOTAL_SALES
 FROM KMS_SQL
 	GROUP BY PRODUCT_CATEGORY
 	ORDER BY TOTAL_SALES DESC; ```
-- Total sales of appliances in ontario
+
+- Total sales of appliances in Ontario
 ``` SELECT SUM(SALES)AS TOTAL_SALES
 FROM KMS_SQL
 	WHERE PRODUCT_SUB_CATEGORY='Appliances' AND PROVINCE='Ontario'; ```
+
 - Customer with returned items and customer segments
 ``` SELECT DISTINCT KMS_SQL.CUSTOMER_NAME, KMS_SQL.CUSTOMER_SEGMENT
 FROM KMS_SQL
@@ -55,7 +58,13 @@ FROM KMS_SQL
 ``` SELECT ORDER_PRIORITY, SHIP_MODE, COUNT(*)AS ORDER_COUNT, SUM(SHIPPING_COST)AS TOTAL_SHIPPING_COST
 FROM KMS_SQL
 	GROUP BY ORDER_PRIORITY, SHIP_MODE
-	ORDER BY ORDER_PRIORITY, TOTAL_SHIPPING_COST DESC; ```
-	
-### Insights
+	ORDER BY ORDER_PRIORITY, TOTAL_SHIPPING_COST DESC;```
 
+
+
+### Insight
+- Technology category had the highest sales
+- West, Ontario and Prarie are the regions with the highest sales
+- Nunavut, NorthWest territories, Yukon are the regions with the lowest sales
+- The shipping method that acquired the most expense is the delivery truck
+- Top customer was from the consumer segmnets, with a prefrence for products from the office supply and technology categories.
