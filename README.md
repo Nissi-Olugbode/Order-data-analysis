@@ -36,7 +36,8 @@ The dataset tables were provided in CSV format. Contains records of product orde
 ### Exploratory Data Analysis
 
 ### Data Analysis
-This includes some lines on how I created some SQL queries;
+This includes some lines on some of the SQL queries;
+
 - Product Category with Highest Sales
   ``` SELECT PRODUCT_CATEGORY, SUM(SALES)AS TOTAL_SALES
 FROM KMS_SQL
@@ -58,9 +59,10 @@ FROM KMS_SQL
 ``` SELECT ORDER_PRIORITY, SHIP_MODE, COUNT(*)AS ORDER_COUNT, SUM(SHIPPING_COST)AS TOTAL_SHIPPING_COST
 FROM KMS_SQL
 	GROUP BY ORDER_PRIORITY, SHIP_MODE
-	``` ORDER BY ORDER_PRIORITY, TOTAL_SHIPPING_COST DESC;```
+	``` ORDER BY ORDER_PRIORITY, TOTAL_SHIPPING_COST DESC; ```
 
-*You can download the full `.sql` file here:[https://github.com/Nissi-Olugbode/Order-data-analysis/blob/main/KMS_SQL.sql]*
+You can download the full `.sql` file here:[https://github.com/Nissi-Olugbode/Order-data-analysis/blob/main/KMS_SQL.sql]
+
 ### Insight
 - Technology category had the highest sales
 - West, Ontario and Prarie are the regions with the highest sales
