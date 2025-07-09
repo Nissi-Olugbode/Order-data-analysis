@@ -60,6 +60,7 @@ FROM KMS_SQL
 	GROUP BY ORDER_PRIORITY, SHIP_MODE
 	``` ORDER BY ORDER_PRIORITY, TOTAL_SHIPPING_COST DESC;```
 
+*You can download the full `.sql` file here:[https://github.com/Nissi-Olugbode/Order-data-analysis/blob/main/KMS_SQL.sql]*
 ### Insight
 - Technology category had the highest sales
 - West, Ontario and Prarie are the regions with the highest sales
