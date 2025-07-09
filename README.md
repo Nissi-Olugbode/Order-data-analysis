@@ -37,9 +37,9 @@ The dataset tables were provided in CSV format. Contains records of product orde
 
 ### Data Analysis
 This includes some lines on some of the SQL queries;
-
 - Product Category with Highest Sales
-  ``` SELECT PRODUCT_CATEGORY, SUM(SALES)AS TOTAL_SALES
+  
+``` SELECT PRODUCT_CATEGORY, SUM(SALES)AS TOTAL_SALES
 FROM KMS_SQL
 	GROUP BY PRODUCT_CATEGORY
 	ORDER BY TOTAL_SALES DESC; ```
