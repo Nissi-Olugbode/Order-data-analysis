@@ -4,10 +4,10 @@ This project was done from the perspective of a Business Intelligence Analyst,ta
 ## Kultra Mega Stores (KMS) Inventory Analysis
 
 ### Project Overview
-The project involved analyzing order records between 2009 and 2012 to address real-world business questions using Microsoft SQL Server and developing an Excel dashboard to visualize insights for stakeholders.
+The project involved analyzing order records between 2009 and 2012 to address real-world business questions using Microsoft SQL Server and developing an BI dashboard to visualize insights for stakeholders.
 
 ### Data Sources
-The data set was provided in CSV format. It contains records of product orders, customers, sales, profits, categories, shipping methods, and returns over a 4-year period.
+The dataset tables were provided in CSV format. Contains records of product orders, customers, sales, profits, categories, shipping methods, and a table with returns for over a 4-year period.
 
 ### Objectives
 1. Identify the product category with the highest sales
@@ -58,13 +58,11 @@ FROM KMS_SQL
 ``` SELECT ORDER_PRIORITY, SHIP_MODE, COUNT(*)AS ORDER_COUNT, SUM(SHIPPING_COST)AS TOTAL_SHIPPING_COST
 FROM KMS_SQL
 	GROUP BY ORDER_PRIORITY, SHIP_MODE
-	ORDER BY ORDER_PRIORITY, TOTAL_SHIPPING_COST DESC;```
-
-
+	``` ORDER BY ORDER_PRIORITY, TOTAL_SHIPPING_COST DESC;```
 
 ### Insight
 - Technology category had the highest sales
 - West, Ontario and Prarie are the regions with the highest sales
 - Nunavut, NorthWest territories, Yukon are the regions with the lowest sales
 - The shipping method that acquired the most expense is the delivery truck
-- Top customer was from the consumer segmnets, with a prefrence for products from the office supply and technology categories.
+- Top customer was from the consumer segments, with a prefrence for products from the office supply and technology categories.
