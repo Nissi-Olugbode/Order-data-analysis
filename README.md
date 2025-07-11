@@ -15,16 +15,17 @@ The dataset tables were provided in CSV format. Contains records of product orde
 3. Calculate total appliance sales in Ontario
 4. Provide recommendations to improve revenue from the bottom 10 customers
 5. Identify which shipping method incurred the highest shipping costs
-6. dentify the most valuable customers and their purchase patterns
+6. Identify the most valuable customers and their purchase patterns
 7. Find the highest-spending small business customer
 8. Determine which corporate customer placed the most orders (2009–2012)
 9. Highlight the most profitable consumer customer
 10. Identify customers who returned items and their segments
 11. Analyze whether shipping cost spending aligns with order priority levels
+12. Create a dashboard to visualize 
 
 ### Tools
 - Microsoft SQL Server: Data querying, joining, and aggregation
-
+- Microsoft Power BI:Data modelling, data visualization and dashboard creation.
 ### SQL Analysis
 - Aggregations for sales, profit, shipping cost, and order count
 - Filtering by region, segment, and product category
@@ -33,37 +34,29 @@ The dataset tables were provided in CSV format. Contains records of product orde
 - CASE statements for evaluating shipping cost appropriateness by order priority
 - Grouping and Sorting to extract Top/Bottom performers
 
+### Power BI Analysis
+- Download full .pbix file [here.]()
+The analysis includes a interactive Power BI dashboard with the following visualizations;
+- Relationship between customer segment and sales
+- Region with the highest sales
+- Product categories with their sales
+- Customers with the highest and lowest sales
+- Customers with the most returns
+
 ### Exploratory Data Analysis
-
+This involved exloring of the data to analyze the following:
+1. Identify the product category with the highest sales
+2. Determine the Top 3 and Bottom 3 regions by total sales
+3. Calculate total appliance sales in Ontario
+4. Provide recommendations to improve revenue from the bottom 10 customers
+5. Identify which shipping method incurred the highest shipping costs
+6. Identify the most valuable customers and their purchase patterns
+7. Find the highest-spending small business customer
+8. Determine which corporate customer placed the most orders (2009–2012)
+9. Highlight the most profitable consumer customer
+10. Identify customers who returned items and their segments
+11. Analyze whether shipping cost spending aligns with order priority levels
 ### Data Analysis
-This includes some lines on some of the SQL queries;
-- Product Category with Highest Sales
-  
-
-
-``` SELECT PRODUCT_CATEGORY, SUM(SALES)AS TOTAL_SALES
-FROM KMS_SQL
-	GROUP BY PRODUCT_CATEGORY
-	ORDER BY TOTAL_SALES DESC; ```
-
-- Total sales of appliances in Ontario
-``` SELECT SUM(SALES)AS TOTAL_SALES
-FROM KMS_SQL
-	WHERE PRODUCT_SUB_CATEGORY='Appliances' AND PROVINCE='Ontario'; ```
-
-- Customer with returned items and customer segments
-``` SELECT DISTINCT KMS_SQL.CUSTOMER_NAME, KMS_SQL.CUSTOMER_SEGMENT
-FROM KMS_SQL
-	JOIN ORDER_STATUS 
-		ON KMS_SQL.ORDER_ID=ORDER_STATUS.ORDER_ID; ```
-
-- Shipping cost vs order priority
-``` SELECT ORDER_PRIORITY, SHIP_MODE, COUNT(*)AS ORDER_COUNT, SUM(SHIPPING_COST)AS TOTAL_SHIPPING_COST
-FROM KMS_SQL
-	GROUP BY ORDER_PRIORITY, SHIP_MODE
-	``` ORDER BY ORDER_PRIORITY, TOTAL_SHIPPING_COST DESC; ```
-
-** You can download the full `.sql` file here:[https://github.com/Nissi-Olugbode/Order-data-analysis/blob/main/KMS_SQL.sql] **
 
 ### Insight
 - Technology category had the highest sales
@@ -71,3 +64,4 @@ FROM KMS_SQL
 - Nunavut, NorthWest territories, Yukon are the regions with the lowest sales
 - The shipping method that acquired the most expense is the delivery truck
 - Top customer was from the consumer segments, with a prefrence for products from the office supply and technology categories.
+
