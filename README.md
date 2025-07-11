@@ -27,6 +27,7 @@ The dataset tables were provided in CSV format. Contains records of product orde
 - Microsoft SQL Server: Data querying, joining, and aggregation
 - Microsoft Power BI:Data modelling, data visualization and dashboard creation.
 ### SQL Analysis
+Download full .sql file [here.](https://github.com/Nissi-Olugbode/Order-data-analysis/blob/main/KMS_SQL.sql)
 - Aggregations for sales, profit, shipping cost, and order count
 - Filtering by region, segment, and product category
 - Window Functions to rank customers by revenue and profit
@@ -35,7 +36,7 @@ The dataset tables were provided in CSV format. Contains records of product orde
 - Grouping and Sorting to extract Top/Bottom performers
 
 ### Power BI Analysis
-- Download full .pbix file [here.](https://github.com/Nissi-Olugbode/Order-data-analysis/blob/main/KMS_dashboard.pbix)
+Download full .pbix file [here.](https://github.com/Nissi-Olugbode/Order-data-analysis/blob/main/KMS_dashboard.pbix)
 The analysis includes a interactive Power BI dashboard with the following visualizations;
 - Relationship between customer segment and sales
 - Region with the highest sales
@@ -56,7 +57,27 @@ This involved exloring of the data to analyze the following:
 9. Highlight the most profitable consumer customer
 10. Identify customers who returned items and their segments
 11. Analyze whether shipping cost spending aligns with order priority levels
+    
 ### Data Analysis
+This includes some lines on some of the SQL queries;
+- Product with highest sales
+--  ``` SELECT PRODUCT_CATEGORY, SUM(SALES)AS TOTAL_SALES
+FROM KMS_SQL
+	GROUP BY PRODUCT_CATEGORY
+	ORDER BY TOTAL_SALES DESC; ```
+
+- Customer with returned items and customer segments
+-- ``` SELECT DISTINCT KMS_SQL.CUSTOMER_NAME, KMS_SQL.CUSTOMER_SEGMENT
+FROM KMS_SQL
+	JOIN ORDER_STATUS 
+		ON KMS_SQL.ORDER_ID=ORDER_STATUS.ORDER_ID; ```
+
+- Shipping cost vs order priority
+-- ``` SELECT ORDER_PRIORITY, SHIP_MODE, COUNT(*)AS ORDER_COUNT, SUM(SHIPPING_COST)AS TOTAL_SHIPPING_COST
+FROM KMS_SQL
+	GROUP BY ORDER_PRIORITY, SHIP_MODE
+	ORDER BY ORDER_PRIORITY, TOTAL_SHIPPING_COST DESC; ```
+
 
 ### Insight
 - Technology category had the highest sales
