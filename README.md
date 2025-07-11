@@ -35,7 +35,7 @@ The dataset tables were provided in CSV format. Contains records of product orde
 - Grouping and Sorting to extract Top/Bottom performers
 
 ### Power BI Analysis
-- Download full .pbix file [here.]()
+- Download full .pbix file [here.](https://github.com/Nissi-Olugbode/Order-data-analysis/blob/main/KMS_dashboard.pbix)
 The analysis includes a interactive Power BI dashboard with the following visualizations;
 - Relationship between customer segment and sales
 - Region with the highest sales
