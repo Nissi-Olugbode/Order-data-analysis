@@ -1,5 +1,5 @@
 # Inventory-Analysis
-This project was done from the perspective of a Business Intelligence Analyst,tasked with analyzing historical order data for Kultra Mega Stores (KMS) — a leading office supplies and furniture provider headquartered in Lagos, Nigeria. The focus was on supporting the Abuja division by uncovering key performance metrics and identifying opportunities for strategic business improvement.
+This project was done from the perspective of a Business Intelligence Analyst,tasked with analyzing historical order data for Kultra Mega Stores (KMS) — a technology, office supplies and furniture provider.  To uncover key performance metrics and identify opportunities for strategic business improvement.
 
 ## Kultra Mega Stores (KMS) Inventory Analysis
 
@@ -21,6 +21,7 @@ The dataset tables were provided in CSV format. Contains records of product orde
 ### Tools
 - Microsoft SQL Server: Data querying, joining, and aggregation
 - Microsoft Power BI:Data modelling, data visualization and dashboard creation.
+  
 ### SQL Analysis
 Download full .sql file [here.](https://github.com/Nissi-Olugbode/Order-data-analysis/blob/main/KMS_SQL.sql)
 - Aggregations for sales, profit, shipping cost, and order count
