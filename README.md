@@ -10,18 +10,13 @@ The project involved analyzing order records between 2009 and 2012 to address re
 The dataset tables were provided in CSV format. Contains records of product orders, customers, sales, profits, categories, shipping methods, and a table with returns for over a 4-year period.
 
 ### Objectives
-1. Identify the product category with the highest sales
-2. Determine the Top 3 and Bottom 3 regions by total sales
-3. Calculate total appliance sales in Ontario
-4. Provide recommendations to improve revenue from the bottom 10 customers
-5. Identify which shipping method incurred the highest shipping costs
-6. Identify the most valuable customers and their purchase patterns
-7. Find the highest-spending small business customer
-8. Determine which corporate customer placed the most orders (2009–2012)
-9. Highlight the most profitable consumer customer
-10. Identify customers who returned items and their segments
-11. Analyze whether shipping cost spending aligns with order priority levels
-12. Create a dashboard to visualize 
+- Identify the relationship between product category and sales
+- Analyze regions by total sales
+- Provide recommendations to improve revenue from the bottom 10 customers
+- Identify the most valuable customers and their purchase patterns
+- Identify customers who returned items and their segments
+- Analyze whether shipping cost spending aligns with order priority levels
+- Create a dashboard to visualize 
 
 ### Tools
 - Microsoft SQL Server: Data querying, joining, and aggregation
@@ -62,8 +57,8 @@ This involved exloring of the data to analyze the following:
 This includes some lines on some of the SQL queries;
 - Product with highest sales
 --  ``` SELECT PRODUCT_CATEGORY, SUM(SALES)AS TOTAL_SALES
-FROM KMS_SQL
-	GROUP BY PRODUCT_CATEGORY
+  FROM KMS_SQL
+  GROUP BY PRODUCT_CATEGORY
 	ORDER BY TOTAL_SALES DESC; ```
 
 - Customer with returned items and customer segments
