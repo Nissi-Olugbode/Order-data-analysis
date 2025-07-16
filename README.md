@@ -76,6 +76,7 @@ FROM KMS_SQL
 
 
 ### Insight
+From the data analysis it was observed that;
 - Technology category had the highest sales
 - West, Ontario and Prarie are the regions with the highest sales
 - Nunavut, NorthWest territories, Yukon are the regions with the lowest sales
