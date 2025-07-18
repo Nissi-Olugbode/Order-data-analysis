@@ -92,5 +92,5 @@ From the data analysis it was observed that;
 - The shipping method that acquired the most expense is the delivery truck
 - Top customer was from the consumer segments, with a prefrence for products from the office supply and technology categories.
 - The analysis showed that the highest returns were from consumer customers, home office consumers and coorporate consumers segments,
-- If the delivery truck is most economical, the company did not appropriately disparse shipping cost based on order priority because, delivery truck was the second highest order count on all order priority level including the low priority and express air had the lowest order count in all order piority level including the critical and high priority orders.
+- If the delivery truck is most economical, the company did not appropriately disparse shipping cost based on order priority because, delivery truck was the second highest order count on all order priority level including the low priority and express air had the lowest order count in all order piority level including the critical and high priority orders. We would expect that in critical and high priority orders, there are more shippings done via express air.
 
