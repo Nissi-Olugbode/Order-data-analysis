@@ -39,6 +39,8 @@ The analysis includes a interactive Power BI dashboard with the following visual
 - Product categories with their sales
 - Customers with the highest and lowest sales
 - Customers with the most returns
+  
+![Here is a preview of the dashboard](https://github.com/Nissi-Olugbode/Order-data-analysis/blob/main/KMS%20dashboard.JPG)
 
 ### Exploratory Data Analysis
 This involved exloring of the data to analyze the following:
