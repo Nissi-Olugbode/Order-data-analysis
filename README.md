@@ -7,7 +7,7 @@ This project was done from the perspective of a Business Intelligence Analyst,ta
 The project involved analyzing order records between 2009 and 2012 to address real-world business questions using Microsoft SQL Server and developing an BI dashboard to visualize insights for stakeholders.
 
 ### Data Sources
-The dataset tables were provided in CSV format. Contains records of product orders, customers, sales, profits, categories, shipping methods, and a table with returns for over a 4-year period.
+The dataset tables were provided in CSV format. Contains records of product orders, customers, sales, profits, categories, shipping methods, order priority, and a table with returns for over a 4-year period.
 
 ### Objectives
 - Identify the relationship between product category and sales
@@ -89,4 +89,5 @@ From the data analysis it was observed that;
 - Nunavut, NorthWest territories, Yukon are the regions with the lowest sales
 - The shipping method that acquired the most expense is the delivery truck
 - Top customer was from the consumer segments, with a prefrence for products from the office supply and technology categories.
+- If the delivery truck is most economical, the company did not appropriately disparse shipping cost based on order priority because, delivery truck was the second highest order count on all order priority level including the low priority and express air had the lowest order count in all order piority level including the critical and high priority orders.
 
